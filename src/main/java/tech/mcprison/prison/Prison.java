@@ -119,6 +119,9 @@ public class Prison extends JavaPlugin implements Listener {
     private void initMetrics() {
         if (config.optOut)
             return;
+        if(getDescription().getVersion().contains("SNAPSHOT"))
+            return;
+
         try {
             Metrics metrics = new Metrics(this);
 

@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b4d7934-576d-4d2a-b246-dbeb163ecebd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ComponentManager.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/CmdReload.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/BalanceChangeListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/Rank.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/Ranks.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/RanksConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/SerializableRank.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/UserInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdAddRank.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdDemote.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdPromote.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdRemoveRank.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdSet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/RanksCommandManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/events/BalanceChangeEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/events/DemoteEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/events/RankAddedEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/events/RankupEvent.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/Prison.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/Prison.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Component.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Component.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/Mines.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/Mines.java" />
     </list>
     <ignored path="Prison.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,8 +42,8 @@
       <file leaf-file-name="Prison.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tech/mcprison/prison/Prison.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2670">
-              <caret line="204" column="14" selection-start-line="204" selection-start-column="14" selection-end-line="204" selection-end-column="14" />
+            <state relative-caret-position="630">
+              <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -861,7 +841,7 @@
       <workItem from="1466016027281" duration="5067000" />
       <workItem from="1466034393778" duration="19031000" />
       <workItem from="1466359356109" duration="380000" />
-      <workItem from="1469682779552" duration="2219000" />
+      <workItem from="1469682779552" duration="2296000" />
     </task>
     <task id="LOCAL-00001" summary="This is v2.1.5">
       <created>1447562574532</created>
@@ -1073,11 +1053,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469684002701</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Deleted the entire ranks system, components are now managed">
+      <created>1469685080768</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1469685080768</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41637000" />
+    <option name="totallyTimeSpent" value="41714000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1136,7 +1123,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Improved mine loading" />
     <MESSAGE value="Attempt to fix mine spawns, pitch and yaw are still messed up" />
     <MESSAGE value="ranks.yml will no longer be auto-generated." />
     <MESSAGE value="Added reload command, asynchronous resets, and more" />
@@ -1161,7 +1147,8 @@
     <MESSAGE value="Autosmelt no longer works in creative" />
     <MESSAGE value="Enormous refactoring" />
     <MESSAGE value="Move fast and break things.&#10;&#10;Deleted old command library, stupid exceptions, old-fashioned anti-UUID xenophobia, and more breakages. Also reworked logger... what was I thinking before!?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move fast and break things.&#10;&#10;Deleted old command library, stupid exceptions, old-fashioned anti-UUID xenophobia, and more breakages. Also reworked logger... what was I thinking before!?" />
+    <MESSAGE value="Deleted the entire ranks system, components are now managed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted the entire ranks system, components are now managed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1522,8 +1509,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tech/mcprison/prison/Prison.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2670">
-          <caret line="204" column="14" selection-start-line="204" selection-start-column="14" selection-end-line="204" selection-end-column="14" />
+        <state relative-caret-position="630">
+          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
