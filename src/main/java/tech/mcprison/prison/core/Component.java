@@ -34,13 +34,6 @@ public interface Component {
     String getName();
 
     /**
-     * Get the base command for this component.
-     *
-     * @return The base command.
-     */
-    String getBaseCommand();
-
-    /**
      * Check if the component is enabled.
      *
      * @return true if the component is enabled, false otherwise.
@@ -61,8 +54,10 @@ public interface Component {
 
     /**
      * Called after the component is deemed compatible and enabled.
+     *
+     * @return true if the enable succeeded, false otherwise. If false, you are expected to print your own error.
      */
-    void enable() throws FailedToStartException;
+    boolean enable();
 
     /**
      * Called when the plugin disables.

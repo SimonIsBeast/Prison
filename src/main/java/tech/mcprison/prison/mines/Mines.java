@@ -54,8 +54,13 @@ public class Mines implements Component {
         this.enabled = enabled;
     }
 
-    public void enable() throws FailedToStartException {
+    public boolean enable() {
         i = this;
+
+        if(!Bukkit.getPluginManager().isPluginEnabled("WorldEdit")) {
+            Prison.l.severe("In order to use mines, you must have WorldEdit installed. Please install it, and then try loading mines again.");
+            return false;
+        }
 
         File oldUnecessaryFile = new File(Prison.i().getDataFolder(), "minesupdated.txt");
         if (oldUnecessaryFile.exists())
@@ -64,6 +69,8 @@ public class Mines implements Component {
         mm = new MinesManager();
         mcm = new MinesCommandManager(this);
         core.getCommand("mines").setExecutor(mcm);
+
+        return true;
     }
 
     public void reload() {

@@ -32,10 +32,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import tech.mcprison.prison.core.*;
 import tech.mcprison.prison.core.Updater.UpdateResult;
 import tech.mcprison.prison.core.Updater.UpdateType;
-import tech.mcprison.prison.core.cmds.PrisonCommandManager;
-import tech.mcprison.prison.mines.Mine;
 import tech.mcprison.prison.mines.Mines;
-import tech.mcprison.prison.ranks.Ranks;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,23 +42,28 @@ import java.io.IOException;
  */
 public class Prison extends JavaPlugin implements Listener {
 
-    public static PrisonLogger l = new PrisonLogger();
-    // Instance of Core
+    ///
+    /// SINGLETON
+    ///
+
     private static Prison i = null;
-    public Mines mines;
-    public Ranks ranks;
-    public PlayerList playerList;
-    public Config config;
-    public ItemManager im;
-    public Updater updater;
-    private Economy economy;
-    private Permission permissions;
-    private boolean updateAvailable = false;
-    private String updateLatestName;
 
     public static Prison i() {
         return i;
     }
+
+    ///
+    /// FIELDS
+    ///
+
+    public static PrisonLogger l = new PrisonLogger();
+    public Config config;
+    public ItemManager im;
+    private ComponentManager componentManager;
+    public Updater updater;
+
+    private Economy economy = null;
+    private Permission permissions = null;
 
     // Utility Methods
     public static String color(String text) {
@@ -77,6 +79,8 @@ public class Prison extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
 
         bootstrap();
+        initPermissions();
+        initEconomy();
         initComponents();
         initCommands();
 
@@ -95,23 +99,14 @@ public class Prison extends JavaPlugin implements Listener {
     private void bootstrap() {
         config = new Config();
         im = new ItemManager();
+        componentManager = new ComponentManager();
         new MessageUtil();
-        playerList = new PlayerList();
-        getServer().getPluginManager().registerEvents(playerList, this);
         updater = new Updater(this, 76155, this.getFile(), UpdateType.NO_DOWNLOAD, true);
     }
 
     private void initComponents() {
-        mines = new Mines();
-        ranks = new Ranks();
-        mines.setEnabled(config.enableMines);
-        ranks.setEnabled(config.enableRanks);
-
-        initEconomy();
-        initPermissions();
-        checkCompatibility();
-        enableMines();
-        enableRanks();
+        componentManager.addComponent(new Mines());
+        componentManager.enableAll();
     }
 
     private void initCommands() {
@@ -119,7 +114,6 @@ public class Prison extends JavaPlugin implements Listener {
             new AutoSmelt();
         if (config.enableAutoblock)
             new BlockCommand();
-        getCommand("prison").setExecutor(new PrisonCommandManager());
     }
 
     private void initMetrics() {
@@ -155,12 +149,11 @@ public class Prison extends JavaPlugin implements Listener {
     private void updateCheck() {
         if (config.checkUpdates && !getDescription().getVersion().contains("-SNAPSHOT")) {
             if (updater.getResult() == UpdateResult.UPDATE_AVAILABLE) {
-                updateLatestName = updater.getLatestName();
-                l.info(MessageUtil.get("general.updateAvailable", updateLatestName));
-                this.updateAvailable = true;
+                l.info(MessageUtil.get("general.updateAvailable", updater.getLatestName()));
                 for (Player p : getServer().getOnlinePlayers()) {
                     if (p.isOp() || p.hasPermission("prison.manage")) {
-                        p.sendMessage(MessageUtil.get("general.updateAvailable", updateLatestName));
+                        p.sendMessage(
+                            MessageUtil.get("general.updateAvailable", updater.getLatestName()));
                     }
                 }
             }
@@ -181,31 +174,10 @@ public class Prison extends JavaPlugin implements Listener {
         }, 10L);
     }
 
-    private void enableMines() {
-        if (mines.isEnabled()) {
-            try {
-                mines.enable();
-            } catch (FailedToStartException e) {
-                l.severe("Could not start mines.");
-                return;
-            }
-            l.info("&2Mines enabled.");
-        }
-    }
-
-    private void enableRanks() {
-        if (ranks.isEnabled()) {
-            try {
-                ranks.enable();
-            } catch (FailedToStartException e) {
-                l.severe("Could not start ranks.");
-                return;
-            }
-            l.info("&2Ranks enabled.");
-        }
-    }
-
     private void initEconomy() {
+        if (!Bukkit.getPluginManager().isPluginEnabled("Vault"))
+            return;
+
         RegisteredServiceProvider<Economy> economyProvider = getServer().getServicesManager()
             .getRegistration(net.milkbowl.vault.economy.Economy.class);
         if (economyProvider != null) {
@@ -216,6 +188,9 @@ public class Prison extends JavaPlugin implements Listener {
     }
 
     private void initPermissions() {
+        if (!Bukkit.getPluginManager().isPluginEnabled("Vault"))
+            return;
+
         RegisteredServiceProvider<Permission> permissionProvider = getServer().getServicesManager()
             .getRegistration(net.milkbowl.vault.permission.Permission.class);
         if (permissionProvider != null) {
@@ -225,43 +200,11 @@ public class Prison extends JavaPlugin implements Listener {
         permissions = null;
     }
 
-    private void checkCompatibility() {
-        if (!hasPlugin("Vault")) {
-            ranks.setEnabled(false);
-            l.warning("Could not enable Ranks because Vault is not loaded.");
-        }
-        if (!hasPlugin("WorldEdit")) {
-            mines.setEnabled(false);
-            l.warning("Could not enable Mines because WorldEdit is not loaded.");
-        }
-    }
-
-    private boolean hasPlugin(String name) {
-        return Bukkit.getServer().getPluginManager().getPlugin(name) != null;
-    }
-
     // END ENABLE STUFF
 
     public void onDisable() {
-        if (mines.isEnabled()) {
-            for (Mine m : mines.mm.mines.values()) {
-                m.save();
-            }
-        }
-    }
-
-    public void reload() {
-        config.reload();
-        MessageUtil.reload();
-        playerList = new PlayerList();
-
-        mines.disable();
-        mines = new Mines();
-        enableMines();
-
-        ranks.disable();
-        ranks = new Ranks();
-        enableRanks();
+        componentManager.disableAll();
+        componentManager.components.clear();
     }
 
     public Permission getPermissions() {
@@ -278,10 +221,10 @@ public class Prison extends JavaPlugin implements Listener {
 
     // Listeners
     @EventHandler public void onPlayerJoin(PlayerJoinEvent e) {
-        if (updateAvailable) {
+        if (updater.getResult() == UpdateResult.UPDATE_AVAILABLE) {
             Player p = e.getPlayer();
             if (p.isOp() || p.hasPermission("prison.manage")) {
-                p.sendMessage(MessageUtil.get("general.updateAvailable", updateLatestName));
+                p.sendMessage(MessageUtil.get("general.updateAvailable", updater.getLatestName()));
             }
         }
     }
