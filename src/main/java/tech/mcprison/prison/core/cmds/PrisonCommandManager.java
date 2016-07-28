@@ -19,9 +19,7 @@
 
 package tech.mcprison.prison.core.cmds;
 
-import tech.mcprison.prison.core.AbstractCommandManager;
 import tech.mcprison.prison.core.Component;
-import tech.mcprison.prison.core.FailedToStartException;
 
 /**
  * @author SirFaizdat

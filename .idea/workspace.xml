@@ -1,119 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b4d7934-576d-4d2a-b246-dbeb163ecebd" name="Default" comment="Enormous refactor">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/AbstractCommandManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/AutoSmelt.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/BlockCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Command.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Component.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Config.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Configuration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/FailedToStartException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/ItemManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/MessageUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Metrics.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/PlayerList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Prison.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/PrisonLogger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Updater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/CmdReload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/CmdUpdate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/CmdVersion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/PrisonCommandManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/Block.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/Mine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/Mines.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/MinesCommandManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/MinesManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/SerializableMine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandAddBlock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandCreate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandDelete.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandRedefine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandRemoveBlock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandReset.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/BalanceChangeListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/Rank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/Ranks.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/RanksConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/SerializableRank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/UserInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdAddRank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdDemote.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdPromote.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdRemoveRank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdSet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/RanksCommandManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/events/BalanceChangeEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/events/DemoteEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/events/RankAddedEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/events/RankupEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/localitems.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/messages.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/config.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/localitems.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/AbstractCommandManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/AutoSmelt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/BlockCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/Command.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/Component.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/Config.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/Configuration.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/FailedToStartException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/ItemManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/MessageUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/Metrics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/PlayerList.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/Prison.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/PrisonLogger.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/Updater.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/cmds/CmdReload.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/cmds/CmdUpdate.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/cmds/CmdVersion.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/cmds/PrisonCommandManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/Block.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/Mine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/Mines.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/MinesCommandManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/MinesManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/SerializableMine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/cmds/CommandAddBlock.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/cmds/CommandCreate.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/cmds/CommandDelete.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/cmds/CommandInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/cmds/CommandList.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/cmds/CommandRedefine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/cmds/CommandRemoveBlock.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/cmds/CommandReset.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/BalanceChangeListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/Rank.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/Ranks.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/RanksConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/SerializableRank.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/UserInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/cmds/CmdAddRank.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/cmds/CmdDemote.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/cmds/CmdPromote.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/cmds/CmdRemoveRank.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/cmds/CmdSet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/cmds/RanksCommandManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/events/BalanceChangeEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/events/DemoteEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/events/RankAddedEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/me/sirfaizdat/prison/ranks/events/RankupEvent.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/messages.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/plugin.yml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="9b4d7934-576d-4d2a-b246-dbeb163ecebd" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/AbstractCommandManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Command.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/FailedToStartException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/PlayerList.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Prison.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/Prison.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Prison.iml" afterPath="$PROJECT_DIR$/Prison.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/AutoSmelt.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/AutoSmelt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/BlockCommand.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/BlockCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Config.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Configuration.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Configuration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/ItemManager.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/ItemManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/MessageUtil.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/MessageUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/PrisonLogger.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/PrisonLogger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/CmdReload.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/CmdReload.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/CmdUpdate.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/CmdUpdate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/CmdVersion.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/CmdVersion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/PrisonCommandManager.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/cmds/PrisonCommandManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/Mine.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/Mine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/Mines.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/Mines.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/MinesCommandManager.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/MinesCommandManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/MinesManager.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/MinesManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandAddBlock.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandAddBlock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandCreate.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandCreate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandDelete.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandDelete.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandInfo.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandList.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandRedefine.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandRedefine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandRemoveBlock.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandRemoveBlock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandReset.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/mines/cmds/CommandReset.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/BalanceChangeListener.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/BalanceChangeListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/Ranks.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/Ranks.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/RanksConfig.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/RanksConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdAddRank.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdAddRank.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdDemote.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdDemote.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdPromote.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdPromote.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdRemoveRank.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdRemoveRank.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdSet.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/CmdSet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/RanksCommandManager.java" afterPath="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/ranks/cmds/RanksCommandManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" />
     </list>
     <ignored path="Prison.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -149,21 +76,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="Prison.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tech/mcprison/prison/Prison.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            <state relative-caret-position="-1320">
+              <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Prison.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Prison.java">
+      <file leaf-file-name="PrisonLogger.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/PrisonLogger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+            <state relative-caret-position="450">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -185,6 +112,9 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <push-targets>
+      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="origin" target-branch="dev/2.3" />
+    </push-targets>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -194,7 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/MinesBlockListener.java" />
         <option value="$PROJECT_DIR$/src/localitems.csv" />
         <option value="$USER_HOME$/TestZones/Spigot TestZone/plugins/Prison/messages.yml" />
         <option value="$PROJECT_DIR$/src/me/sirfaizdat/prison/core/PWorldManager.java" />
@@ -244,6 +173,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Test.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/PrisonLogger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tech/mcprison/prison/Prison.java" />
       </list>
     </option>
   </component>
@@ -329,6 +260,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -914,7 +849,7 @@
       <workItem from="1466016027281" duration="5067000" />
       <workItem from="1466034393778" duration="19031000" />
       <workItem from="1466359356109" duration="380000" />
-      <workItem from="1469682779552" duration="384000" />
+      <workItem from="1469682779552" duration="1041000" />
     </task>
     <task id="LOCAL-00001" summary="This is v2.1.5">
       <created>1447562574532</created>
@@ -1112,11 +1047,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466102596202</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Enormous refactoring">
+      <created>1469683224722</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1469683224722</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39802000" />
+    <option name="totallyTimeSpent" value="40459000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1138,7 +1080,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1147,7 +1089,7 @@
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="News Feed" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1175,7 +1117,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Messages are now customizable, updated localitems.csv" />
     <MESSAGE value="Removed world manager, plus refinements" />
     <MESSAGE value="Improved mine loading" />
     <MESSAGE value="Attempt to fix mine spawns, pitch and yaw are still messed up" />
@@ -1200,7 +1141,8 @@
     <MESSAGE value="Better version command" />
     <MESSAGE value="Switch to GPL License" />
     <MESSAGE value="Autosmelt no longer works in creative" />
-    <option name="LAST_COMMIT_MESSAGE" value="Autosmelt no longer works in creative" />
+    <MESSAGE value="Enormous refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enormous refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1211,34 +1153,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/Mine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="115" column="186" selection-start-line="115" selection-start-column="186" selection-end-line="115" selection-end-column="186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/MinesCommandManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/cmds/CommandList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/sirfaizdat/prison/mines/cmds/CommandInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/sirfaizdat/prison/core/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -1534,18 +1448,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Prison.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        <state relative-caret-position="510">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/PlayerList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tech/mcprison/prison/core/PrisonLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tech/mcprison/prison/Prison.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1320">
+          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
           <folding />
         </state>
       </provider>

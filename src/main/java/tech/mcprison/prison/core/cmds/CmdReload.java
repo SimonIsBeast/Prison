@@ -19,9 +19,8 @@
 
 package tech.mcprison.prison.core.cmds;
 
-import tech.mcprison.prison.core.Command;
 import tech.mcprison.prison.core.MessageUtil;
-import tech.mcprison.prison.core.Prison;
+import tech.mcprison.prison.Prison;
 
 /**
  * @author SirFaizdat

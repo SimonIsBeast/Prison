@@ -22,6 +22,7 @@ package tech.mcprison.prison.core;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
+import tech.mcprison.prison.Prison;
 
 /**
  * Basic colorized logger.
@@ -30,7 +31,7 @@ import org.bukkit.command.ConsoleCommandSender;
  */
 public class PrisonLogger {
 
-    String coloredLogPrefix = "&6[&4Prison&6]";
+    String coloredLogPrefix = "&7[&6Prison&7]";
 
     /**
      * Logs a message to the server.
@@ -40,33 +41,14 @@ public class PrisonLogger {
      */
     public void log(Level level, String message) {
         ConsoleCommandSender sender = Bukkit.getConsoleSender();
-        if (level.equals(Level.INFO)) {
-            if (sender != null) {
-                String fullMsg = Prison.color(coloredLogPrefix + " " + message);
-                sender.sendMessage(fullMsg);
-            } else {
-                String fullMsg = Prison.color(coloredLogPrefix + " " + message);
-                Bukkit.getLogger().info(ChatColor.stripColor(fullMsg));
-            }
-        } else if (level.equals(Level.WARN)) {
-            message = ChatColor.stripColor(message);
-            if (sender != null) {
-                String fullMsg = Prison.color(coloredLogPrefix + " &6" + message);
-                sender.sendMessage(fullMsg);
-            } else {
-                String fullMsg = Prison.color(coloredLogPrefix + " &6" + message);
-                Bukkit.getLogger().info(ChatColor.stripColor(fullMsg));
-            }
-        } else if (level.equals(Level.SEVERE)) {
-            message = ChatColor.stripColor(message);
-            if (sender != null) {
-                String fullMsg = Prison.color(coloredLogPrefix + " &c" + message);
-                sender.sendMessage(fullMsg);
-            } else {
-                String fullMsg = Prison.color(coloredLogPrefix + " &c" + message);
-                Bukkit.getLogger().info(ChatColor.stripColor(fullMsg));
-            }
+
+        message = Prison.color(coloredLogPrefix + level.prefix + level.color + message);
+        if (sender == null) {
+            Bukkit.getLogger().info(ChatColor.stripColor(message));
+        } else {
+            sender.sendMessage(message);
         }
+
     }
 
     /**
@@ -96,8 +78,16 @@ public class PrisonLogger {
         log(Level.SEVERE, message);
     }
 
-    public static enum Level {
-        INFO, WARN, SEVERE;
+    public enum Level {
+        INFO("&7[&3Info&7]&r ", "&7"), WARN("&7[&eWarning&7]&r ", "&e"), SEVERE(
+            "&7[&4Severe &7]&r ", "&e");
+
+        String prefix, color;
+
+        Level(String prefix, String color) {
+            this.prefix = prefix;
+            this.color = color;
+        }
     }
 
 }

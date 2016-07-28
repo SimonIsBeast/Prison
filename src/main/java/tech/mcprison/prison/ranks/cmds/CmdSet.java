@@ -19,9 +19,8 @@
 
 package tech.mcprison.prison.ranks.cmds;
 
-import tech.mcprison.prison.core.Command;
 import tech.mcprison.prison.core.MessageUtil;
-import tech.mcprison.prison.core.Prison;
+import tech.mcprison.prison.Prison;
 import tech.mcprison.prison.ranks.Rank;
 import tech.mcprison.prison.ranks.Ranks;
 

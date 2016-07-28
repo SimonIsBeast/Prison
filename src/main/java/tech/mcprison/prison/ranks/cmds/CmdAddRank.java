@@ -20,9 +20,8 @@
 package tech.mcprison.prison.ranks.cmds;
 
 import org.bukkit.Bukkit;
-import tech.mcprison.prison.core.Command;
 import tech.mcprison.prison.core.MessageUtil;
-import tech.mcprison.prison.core.Prison;
+import tech.mcprison.prison.Prison;
 import tech.mcprison.prison.ranks.Rank;
 import tech.mcprison.prison.ranks.Ranks;
 import tech.mcprison.prison.ranks.events.RankAddedEvent;

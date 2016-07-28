@@ -24,7 +24,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
-import tech.mcprison.prison.core.Prison;
+import tech.mcprison.prison.Prison;
 
 import java.io.File;
 import java.io.FileOutputStream;

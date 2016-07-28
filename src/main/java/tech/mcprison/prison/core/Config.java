@@ -20,6 +20,7 @@
 package tech.mcprison.prison.core;
 
 import org.bukkit.configuration.file.FileConfiguration;
+import tech.mcprison.prison.Prison;
 
 import java.util.List;
 

@@ -22,9 +22,8 @@ package tech.mcprison.prison.ranks.cmds;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import tech.mcprison.prison.core.AbstractCommandManager;
 import tech.mcprison.prison.core.MessageUtil;
-import tech.mcprison.prison.core.Prison;
+import tech.mcprison.prison.Prison;
 import tech.mcprison.prison.ranks.Rank;
 import tech.mcprison.prison.ranks.Ranks;
 

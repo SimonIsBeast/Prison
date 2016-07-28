@@ -20,9 +20,8 @@
 package tech.mcprison.prison.mines.cmds;
 
 import com.sk89q.worldedit.bukkit.selections.Selection;
-import tech.mcprison.prison.core.Command;
 import tech.mcprison.prison.core.MessageUtil;
-import tech.mcprison.prison.core.Prison;
+import tech.mcprison.prison.Prison;
 import tech.mcprison.prison.mines.Mine;
 import tech.mcprison.prison.mines.Mines;
 

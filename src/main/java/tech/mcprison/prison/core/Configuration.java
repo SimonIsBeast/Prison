@@ -21,6 +21,7 @@ package tech.mcprison.prison.core;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import tech.mcprison.prison.Prison;
 
 import java.io.File;
 import java.io.IOException;

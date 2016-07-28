@@ -23,7 +23,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitScheduler;
-import tech.mcprison.prison.core.Prison;
+import tech.mcprison.prison.Prison;
 
 import java.io.*;
 import java.util.ArrayList;

@@ -19,7 +19,6 @@
 
 package tech.mcprison.prison.mines;
 
-import tech.mcprison.prison.core.AbstractCommandManager;
 import tech.mcprison.prison.core.Component;
 import tech.mcprison.prison.mines.cmds.*;
 

@@ -20,7 +20,6 @@
 package tech.mcprison.prison.ranks.cmds;
 
 import org.bukkit.entity.Player;
-import tech.mcprison.prison.core.Command;
 import tech.mcprison.prison.ranks.Ranks;
 
 /**

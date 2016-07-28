@@ -22,8 +22,7 @@ package tech.mcprison.prison.mines;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 import org.bukkit.Bukkit;
 import tech.mcprison.prison.core.Component;
-import tech.mcprison.prison.core.FailedToStartException;
-import tech.mcprison.prison.core.Prison;
+import tech.mcprison.prison.Prison;
 
 import java.io.File;
 

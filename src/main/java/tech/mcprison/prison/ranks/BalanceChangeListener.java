@@ -26,7 +26,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import tech.mcprison.prison.core.Prison;
+import tech.mcprison.prison.Prison;
 import tech.mcprison.prison.ranks.events.BalanceChangeEvent;
 
 import java.util.HashMap;

@@ -17,7 +17,7 @@
  *
  */
 
-package tech.mcprison.prison.core;
+package tech.mcprison.prison;
 
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
@@ -29,6 +29,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import tech.mcprison.prison.core.*;
 import tech.mcprison.prison.core.Updater.UpdateResult;
 import tech.mcprison.prison.core.Updater.UpdateType;
 import tech.mcprison.prison.core.cmds.PrisonCommandManager;

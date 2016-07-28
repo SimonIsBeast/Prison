@@ -24,7 +24,7 @@ package tech.mcprison.prison.ranks;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import tech.mcprison.prison.core.Prison;
+import tech.mcprison.prison.Prison;
 
 import java.io.File;
 import java.io.IOException;

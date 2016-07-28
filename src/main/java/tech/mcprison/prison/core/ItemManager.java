@@ -20,6 +20,7 @@
 package tech.mcprison.prison.core;
 
 import org.bukkit.Material;
+import tech.mcprison.prison.Prison;
 
 import java.io.BufferedReader;
 import java.io.File;

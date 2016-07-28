@@ -19,7 +19,6 @@
 
 package tech.mcprison.prison.mines.cmds;
 
-import tech.mcprison.prison.core.Command;
 import tech.mcprison.prison.core.MessageUtil;
 import tech.mcprison.prison.mines.Mine;
 import tech.mcprison.prison.mines.Mines;

@@ -19,6 +19,8 @@
 
 package tech.mcprison.prison.core;
 
+import tech.mcprison.prison.Prison;
+
 /**
  * @author SirFaizdat
  */
